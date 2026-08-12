@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="OriginOS液态玻璃配置">
+
+        <activity
+            android:name=".ConfigActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- LSPosed 模块标识 -->
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="适配OriginOS5，全局iOS液态玻璃（状态栏/控制中心/桌面/设置）" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="82" />
+    </application>
+</manifest>
