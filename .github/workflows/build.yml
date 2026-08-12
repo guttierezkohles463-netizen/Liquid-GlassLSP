@@ -17,13 +17,13 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: 配置 Android SDK
-        uses: android-actions/setup-android-sdk@v2
+      # 替换为官方可用的Android SDK action
+      - name: Setup Android SDK
+        uses: manishdupati/setup-android-sdk@v1
         with:
           api-level: 34
-          build-tools-version: "34.0.0"
+          build-tools: "34.0.0"
 
-      # 使用action自动生成完整gradle wrapper，不需要系统gradle命令
       - name: Setup Gradle & generate wrapper
         uses: gradle/actions/setup-gradle@v4
 
